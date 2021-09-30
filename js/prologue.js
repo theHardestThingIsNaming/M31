@@ -69,15 +69,29 @@ function loadP2(){
 
         typewriter_002
         .pauseFor(5000)
-        .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the felids of Science, Military, Mining and Support staff.`)
-        .pauseFor(300)
+        .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the felids of Science, Military, Mining and Support staff."`)
+        .pauseFor(500)
         .typeString('<br\><br\><i>Chancellor:</i> "It will be there mission, to first! Establish a base of operations, and second; Setup a worm-whole relay node to allow sustainable access back and forth to M31."')
-        .typeString('<br\><br\><i>Chancellor:</i> "Using this mechanism the Union will spread throughout the Universe"')
+        .pauseFor(500)
+        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galaxy level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached its edge we find ourselves looking at distances in the millions of lightyears to get to the next step on this journey"`)
         .start();
 
-        sleep(35000).then(() => {
-            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';    
+        sleep(40000).then(() => {
+            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP21()">Continue</button>';    
         });   
+}
+
+function loadP21(){
+    document.getElementById('continue_button_002').remove();
+    document.getElementById('spaceship').classList = 'fade-out-image';
+    sleep(2500).then(()=>{
+        document.getElementById('spaceship').style.display = 'none';
+        document.getElementById('localgroup').classList = 'fade-in-image';
+    })
+    sleep(25000).then(() => {
+        document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';    
+    });  
+    
 }
 
 function loadP3(){
