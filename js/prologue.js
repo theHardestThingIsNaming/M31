@@ -33,7 +33,7 @@ function loadContent() {
             document.getElementById('chancellor').classList = "hidden"
             document.getElementById('supernova').classList = 'fade-in-image';
         })
-        .pauseFor(10000)
+        .pauseFor(9000)
         .callFunction(() => {
             document.getElementById('supernova').classList = "hidden"
             document.getElementById('supernova-blast').classList = 'fade-in-image';
@@ -43,10 +43,11 @@ function loadContent() {
             document.getElementById('supernova-blast').classList = 'hidden';
             document.getElementById('chancellor').classList = "fade-in-image"
         })
+        .pauseFor(300)
         .typeString('<br\><br\><i>Chancellor:</i> "With its dying light, NC-167 will ignite the DeepGate"')
         .start();
     
-        sleep(43000).then(() => {
+        sleep(40000).then(() => {
             document.getElementById('next').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP2()">Continue</button>';    
         });
 }
@@ -54,7 +55,7 @@ function loadContent() {
 function loadP2(){
         let content = document.getElementById('content');
         document.getElementById('content').classList = 'fade-out-image';
-        sleep(4500).then(()=>{
+        sleep(2500).then(()=>{
             content.style.display = 'none';
             document.getElementById('content_002').classList = 'fade-in-image';
         })
@@ -67,11 +68,38 @@ function loadP2(){
         });
 
         typewriter_002
-        .pauseFor(10000)
-        .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will take with it a crew of over 100,000. Filled with the brightest minds that the Union has produced, within Science, military, mining and support staff.`)
+        .pauseFor(5000)
+        .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the felids of Science, Military, Mining and Support staff.`)
         .pauseFor(300)
-        .typeString('<br\><br\><i>Chancellor:</i> "It will be there mission, to first! Establish a base of operations, and second; Setup a worm-whole relay node to allow sustainable assess to M31."')
+        .typeString('<br\><br\><i>Chancellor:</i> "It will be there mission, to first! Establish a base of operations, and second; Setup a worm-whole relay node to allow sustainable access back and forth to M31."')
         .typeString('<br\><br\><i>Chancellor:</i> "Using this mechanism the Union will spread throughout the Universe"')
         .start();
+
+        sleep(35000).then(() => {
+            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';    
+        });   
+}
+
+function loadP3(){
+        var app_002 = document.getElementById('app_002');
+        document.getElementById('app_002').innerHTML = '';
+        document.getElementById('continue_button_002').remove();
         
+        var typewriter_002 = new Typewriter(app_002, {
+            loop: false,
+            delay: 30,
+            deleteSpeed: 5,
+        });
+
+        typewriter_002
+        .pauseFor(2000)
+        .typeString(`<i>Chancellor:</i>  "Now we come to the moment of truth.. ".`)
+        .pauseFor(300)
+        .typeString(`<br\><br\><i>Chancellor:</i> "After decades of construction and planning, watch as 'Nova prospectus' makes its final approach towards the Deep-Gate"`)
+        .typeString('<br\><br\><i>Chancellor:</i> "The future of this great Union rests on the success of this mission. Godspeed and a safe passage across the expanse!"')
+        .start();
+
+        sleep(40000).then(() => {
+            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP4()">Continue</button>';    
+        });   
 }

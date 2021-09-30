@@ -10,6 +10,7 @@ html {
     background-attachment: fixed;
     height: 100%;
     width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 h1,
@@ -23,8 +24,8 @@ p {
     font-size: 30px;
 }
 
-.tab {
-    tab-size: 10;
+h1 {
+    font-size: 60px;
 }
 
 i {
@@ -43,9 +44,10 @@ i {
 #spaceship {
     position: relative;
     animation: slide-from-left;
-    animation-duration: 40s;
+    animation-duration: 100s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
+    margin-top: 2em;
 }
 
 @keyframes slide-from-left {
@@ -61,17 +63,13 @@ i {
 
 .text {
     margin: 0 auto;
+    margin-top: 2em;
     width: 50%;
     text-align: left;
     z-index: 1;
     color: #fcfcfc;
     position: relative;
     font-size: 20px;
-}
-
-
-h1 {
-    font-size: 60px;
 }
 
 img {
@@ -146,25 +144,6 @@ audio {
 .stars {
     background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat center center fixed;
     z-index: 0;
-}
-
-p {
-    white-space: pre-line;
-    font-size: 38px;
-    color: rgba(255, 255, 255, .70);
-    animation: animated-text 2s steps(30, end) 1s 1 normal both;
-}
-
-
-/* text animation */
-
-@keyframes animated-text {
-    from {
-        width: 0;
-    }
-    to {
-        width: 90%;
-    }
 }
 
 .button {
