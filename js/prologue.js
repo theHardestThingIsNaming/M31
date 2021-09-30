@@ -43,7 +43,7 @@ function loadContent() {
             document.getElementById('supernova-blast').classList = 'hidden';
             document.getElementById('chancellor').classList = "fade-in-image"
         })
-        .pauseFor(300)
+        .pauseFor(1000)
         .typeString('<br\><br\><i>Chancellor:</i> "With its dying light, NC-167 will ignite the DeepGate"')
         .start();
     
