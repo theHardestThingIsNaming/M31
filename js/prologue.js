@@ -1,3 +1,5 @@
+speed_up = 1
+
 function loadContent() {
     var beginButton = document.getElementById('begin_button');
     beginButton.style.display = 'none';
@@ -46,66 +48,66 @@ function loadContent() {
         .pauseFor(1000)
         .typeString('<br\><br\><i>Chancellor:</i> "With its dying light, NC-167 will ignite the DeepGate"')
         .start();
-    
-        sleep(40000).then(() => {
-            document.getElementById('next').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP2()">Continue</button>';    
-        });
+
+    sleep(40000 / speed_up).then(() => {
+        document.getElementById('next').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP2()">Continue</button>';
+    });
 }
 
-function loadP2(){
-        let content = document.getElementById('content');
-        document.getElementById('content').classList = 'fade-out-image';
-        sleep(2500).then(()=>{
-            content.style.display = 'none';
-            document.getElementById('content_002').classList = 'fade-in-image';
-        })
-        var app_002 = document.getElementById('app_002');
+function loadP2() {
+    let content = document.getElementById('content');
+    document.getElementById('content').classList = 'fade-out-image';
+    sleep(2500).then(() => {
+        content.style.display = 'none';
+        document.getElementById('content_002').classList = 'fade-in-image';
+    })
+    var app_002 = document.getElementById('app_002');
 
-        var typewriter_002 = new Typewriter(app_002, {
-            loop: false,
-            delay: 30,
-            deleteSpeed: 5,
-        });
+    var typewriter_002 = new Typewriter(app_002, {
+        loop: false,
+        delay: 30,
+        deleteSpeed: 5,
+    });
 
-        typewriter_002
+    typewriter_002
         .pauseFor(5000)
-        .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the felids of Science, Military, Mining and Support staff."`)
+        .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the fields of Science, Military, Mining as well as the required supporting staff."`)
         .pauseFor(500)
-        .typeString('<br\><br\><i>Chancellor:</i> "It will be there mission, to first! Establish a base of operations, and second; Setup a worm-whole relay node to allow sustainable access back and forth to M31."')
+        .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. This base will allow the mining crews time to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
         .pauseFor(500)
-        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galaxy level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached its edge we find ourselves looking at distances in the millions of lightyears to get to the next step on this journey"`)
+        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassible distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million years away."`)
         .start();
 
-        sleep(40000).then(() => {
-            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP21()">Continue</button>';    
-        });   
+    sleep(50000 / speed_up).then(() => {
+        document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP21()">Continue</button>';
+    });
 }
 
-function loadP21(){
+function loadP21() {
     document.getElementById('continue_button_002').remove();
     document.getElementById('spaceship').classList = 'fade-out-image';
-    sleep(2500).then(()=>{
+    sleep(2500).then(() => {
         document.getElementById('spaceship').style.display = 'none';
         document.getElementById('localgroup').classList = 'fade-in-image';
     })
-    sleep(25000).then(() => {
-        document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';    
-    });  
-    
+    sleep(30000 / speed_up).then(() => {
+        document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';
+    });
+
 }
 
-function loadP3(){
-        var app_002 = document.getElementById('app_002');
-        document.getElementById('app_002').innerHTML = '';
-        document.getElementById('continue_button_002').remove();
-        
-        var typewriter_002 = new Typewriter(app_002, {
-            loop: false,
-            delay: 30,
-            deleteSpeed: 5,
-        });
+function loadP3() {
+    var app_002 = document.getElementById('app_002');
+    document.getElementById('app_002').innerHTML = '';
+    document.getElementById('continue_button_002').remove();
 
-        typewriter_002
+    var typewriter_002 = new Typewriter(app_002, {
+        loop: false,
+        delay: 30,
+        deleteSpeed: 5,
+    });
+
+    typewriter_002
         .pauseFor(2000)
         .typeString(`<i>Chancellor:</i>  "Now we come to the moment of truth.. ".`)
         .pauseFor(300)
@@ -113,7 +115,38 @@ function loadP3(){
         .typeString('<br\><br\><i>Chancellor:</i> "The future of this great Union rests on the success of this mission. Godspeed and a safe passage across the expanse!"')
         .start();
 
-        sleep(40000).then(() => {
-            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP4()">Continue</button>';    
-        });   
+    sleep(30000 / speed_up).then(() => {
+        document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP4()">Continue</button>';
+    });
+}
+
+function loadP4() {
+    document.getElementById('content_002').innerHTML = '';
+    document.getElementById('cockpit_gif').classList = 'fade-in-image';
+    var app_003 = document.getElementById('app_003');
+    var typewriter_003 = new Typewriter(app_003, {
+        loop: false,
+        delay: 30,
+        deleteSpeed: 5,
+    });
+
+    sleep(8000).then(() => {
+        document.getElementById('cockpit_gif').classList = 'hidden';
+        document.getElementById('cockpit_see_through').classList = '';
+        app_003.classList = 'text';
+    });
+
+    typewriter_003
+        .pauseFor(8000)
+        .typeString(`<i>Chancellor:</i>"Welcome aboard the bridge on the Nova".`)
+        .pauseFor(300)
+        .typeString(`<br\><br\><i>Chancellor:</i> "The crew are remained sedated in their status tanks. The voyage to M31 will be piloted by the ships AI systems."`)
+        .pauseFor(300)
+        .typeString(`<br\><br\><i>Chancellor:</i> "The DeepGate will appear without warning"`)
+        .start();
+
+    sleep(18000 / speed_up).then(() => {
+        app_003.innerHTML="";
+        document.getElementById('next_003').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP5()">Continue</button>';
+    });
 }
