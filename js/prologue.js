@@ -113,15 +113,16 @@ function loadP3() {
         .pauseFor(300)
         .typeString(`<br\><br\><i>Chancellor:</i> "After decades of construction and planning, watch as 'Nova prospectus' makes its final approach towards the Deep-Gate"`)
         .typeString('<br\><br\><i>Chancellor:</i> "The future of this great Union rests on the success of this mission. Godspeed and a safe passage across the expanse!"')
+        .pauseFor(300)
+        .callFunction(() => {
+            document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP4()">Continue</button>';
+        })
         .start();
-
-    sleep(30000 / speed_up).then(() => {
-        document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP4()">Continue</button>';
-    });
 }
 
 function loadP4() {
     document.getElementById('content_002').innerHTML = '';
+    document.getElementById('content_003').classList = '';
     document.getElementById('cockpit_gif').classList = 'fade-in-image';
     var app_003 = document.getElementById('app_003');
     var typewriter_003 = new Typewriter(app_003, {
@@ -138,15 +139,56 @@ function loadP4() {
 
     typewriter_003
         .pauseFor(8000)
-        .typeString(`<i>Chancellor:</i>"Welcome aboard the bridge on the Nova".`)
+        .typeString(`<i class="nova">Nova:</i>  "Welcome aboard the bridge on the Nova".`)
         .pauseFor(300)
-        .typeString(`<br\><br\><i>Chancellor:</i> "The crew are remained sedated in their status tanks. The voyage to M31 will be piloted by the ships AI systems."`)
+        .typeString(`<br\><br\><i class="nova">Nova:</i>  "The crew remained sedated in their status tanks. The voyage to M31 will be piloted by the ships AI systems."`)
         .pauseFor(300)
-        .typeString(`<br\><br\><i>Chancellor:</i> "The DeepGate will appear without warning"`)
+        .typeString(`<br\><br\><i class="nova">Nova:</i>  "The DeepGate will appear in the view port shortly"`)
+        .pauseFor(3000)
+        .callFunction(() => {
+            loadP5();
+            app_003.innerHTML = "";
+        })
         .start();
 
-    sleep(18000 / speed_up).then(() => {
-        app_003.innerHTML="";
-        document.getElementById('next_003').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP5()">Continue</button>';
-    });
+}
+
+function loadP5() {
+    document.getElementById('deepgate_wormhole_transistion').classList = '';
+    document.getElementById('deepgate').classList = '';
+    document.getElementById('next_003').remove();
+
+    sleep(10000).then(() => {
+        document.getElementById('cockpit_see_through').style.animation = "shake 1.5s";
+        document.getElementById('cockpit_see_through').style.animationIterationCount = "13"
+    })
+
+    sleep(20000).then(() => {
+        document.getElementById('cockpit_see_through').style.animation = null;
+        document.getElementById('cockpit_see_through').style.animationIterationCount = null;
+        document.getElementById('deepgate_wormhole_transistion').remove()
+        document.getElementById('deepgate').innerHTML = "";
+        document.getElementById('wormhole').classList = "polygon";
+        document.body.style.backgroundColor = "rgb(2 80 134)";
+        document.body.style.boxShadow = "0 0 2.5vmin 2.5vmin rgb(2 80 134)";
+    }).then(() => {
+        sleep(10000).then(() => {
+            document.body.style.backgroundColor = null;
+            document.body.style.boxShadow = null;
+            document.getElementById('wormhole').remove()
+        });
+    })
+
+    sleep(30000).then(() => {
+        var app_003 = document.getElementById('app_003');
+        var typewriter_003 = new Typewriter(app_003, {
+            loop: false,
+            delay: 30,
+            deleteSpeed: 5,
+        });
+        typewriter_003
+            .pauseFor(300)
+            .typeString(`<i class="nova">Nova:</i>"Welcome to M31..."`)
+            .start();
+    })
 }
