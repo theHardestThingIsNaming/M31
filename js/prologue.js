@@ -1,4 +1,4 @@
-speed_up = 1
+speed_up = 100
 
 function loadContent() {
     var beginButton = document.getElementById('begin_button');
