@@ -1,4 +1,4 @@
-speed_up = 1
+speed_up = 100
 
 function loadContent() {
     var beginButton = document.getElementById('begin_button');
@@ -73,7 +73,7 @@ function loadP2() {
         .pauseFor(5000)
         .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the fields of Science, Military, Mining as well as the required supporting staff."`)
         .pauseFor(500)
-        .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. This base will allow the mining crews time to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
+        .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. Mining crews will being to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
         .pauseFor(500)
         .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassible distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million years away."`)
         .start();
@@ -103,7 +103,7 @@ function loadP3() {
 
     var typewriter_002 = new Typewriter(app_002, {
         loop: false,
-        delay: 30,
+        delay: 30 / speed_up,
         deleteSpeed: 5,
     });
 
@@ -127,7 +127,7 @@ function loadP4() {
     var app_003 = document.getElementById('app_003');
     var typewriter_003 = new Typewriter(app_003, {
         loop: false,
-        delay: 30,
+        delay: 30 / speed_up,
         deleteSpeed: 5,
     });
 
@@ -161,34 +161,41 @@ function loadP5() {
     sleep(10000).then(() => {
         document.getElementById('cockpit_see_through').style.animation = "shake 1.5s";
         document.getElementById('cockpit_see_through').style.animationIterationCount = "13"
+        document.getElementById('wormhole').classList = "fade-in-image";
+    })
+
+    sleep(13000).then(() => {
+        document.getElementById('wormhole').classList = "polygon";
     })
 
     sleep(20000).then(() => {
+        var audio = document.getElementById('opening');
+        audio.src="audio/wormhole.mpeg";
+        audio.loop = false;
+        audio.load(); //call this to just preload the audio without playing
+        audio.play();
         document.getElementById('cockpit_see_through').style.animation = null;
         document.getElementById('cockpit_see_through').style.animationIterationCount = null;
-        document.getElementById('deepgate_wormhole_transistion').remove()
-        document.getElementById('deepgate').innerHTML = "";
-        document.getElementById('wormhole').classList = "polygon";
-        document.body.style.backgroundColor = "rgb(2 80 134)";
-        document.body.style.boxShadow = "0 0 2.5vmin 2.5vmin rgb(2 80 134)";
     }).then(() => {
         sleep(10000).then(() => {
+            document.body.style.backgroundImage = "url('img/m31.jpeg')";
+            document.getElementById('deepgate_wormhole_transistion').remove()
+            document.getElementById('deepgate').innerHTML = "";
             document.body.style.backgroundColor = null;
             document.body.style.boxShadow = null;
-            document.getElementById('wormhole').remove()
+            document.getElementById('wormhole').remove();
         });
     })
 
-    sleep(30000).then(() => {
-        var app_003 = document.getElementById('app_003');
-        var typewriter_003 = new Typewriter(app_003, {
-            loop: false,
-            delay: 30,
-            deleteSpeed: 5,
-        });
-        typewriter_003
-            .pauseFor(300)
-            .typeString(`<i class="nova">Nova:</i>"Welcome to M31..."`)
-            .start();
+    sleep(33000).then(() => {
+        document.getElementById('cockpit_see_through').classList = 'fade-out-image';
+        sleep(3000).then(() => {
+            var app_003 = document.getElementById('app_003');
+            app_003.innerHTML= "<h1 class='fade-in-image title_font'>Messier 31</h1>"
+        })
+    }).then(() => {
+        sleep(4700).then(() => {
+            document.getElementById('cockpit_see_through').remove();
+        })
     })
 }

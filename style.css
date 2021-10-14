@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-html {
+body {
     background-image: url('img/stars.gif');
     background-size: 100%;
     background-repeat: repeat-y;
@@ -31,8 +31,9 @@ h1 {
 i {
     color: antiquewhite;
 }
+
 .nova {
-    color:rgb(216, 63, 63);
+    color: rgb(216, 63, 63);
     font-weight: 900;
 }
 
@@ -171,6 +172,7 @@ audio {
         transform: scale(1.15) rotate(0.01deg);
     }
     100% {
+        opacity: 0;
         display: none;
     }
 }
@@ -279,7 +281,6 @@ audio {
     }
 }
 
-
 #content_003 {
     height: 100vh;
     margin: 0;
@@ -299,18 +300,12 @@ audio {
 }
 
 .polygon {
-    animation: 2s cubic-bezier(0, -0.01, 1, 1) infinite polygon;
+    animation: 20s cubic-bezier(0.1, 0.11, 0.98, 0.97) 1 polygon;
     left: 55%;
     position: absolute;
     top: 60%;
     transform-style: preserve-3d;
-    transform: rotatex( 90deg) rotatey(0) translatey(-25vmin);
-}
-
-@-webkit-keyframes polygon {
-    100% {
-        transform: rotatex(90deg) rotatey(360deg) translatey(0);
-    }
+    transform: rotatex( 90deg) rotatey(0) translatey(-240vmin);
 }
 
 @keyframes polygon {
@@ -419,7 +414,7 @@ audio {
 
 @keyframes changewidth {
     0% {
-        transform:  translate(0, 20%) scale(0.2);
+        transform: translate(0, 20%) scale(0.2);
     }
     5% {
         transform: translate(0, -20%) scale(0.8);
@@ -492,4 +487,14 @@ audio {
     margin-top: -10%;
     margin-left: -10%;
     z-index: 11;
+}
+
+@font-face {
+    font-family: FlareRegular;
+    src: url(./font/Flare-Regular.ttf);
+}
+
+.title_font {
+    font-family: FlareRegular;
+    font-size: 4em;
 }
