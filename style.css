@@ -6,7 +6,6 @@
 body {
     background-image: url('img/stars.gif');
     background-size: 100%;
-    background-repeat: repeat-y;
     background-attachment: fixed;
     height: 100%;
     width: 100%;
@@ -156,10 +155,10 @@ audio {
         opacity: 0.3;
     }
     80% {
-        opacity: 0.5;
+        opacity: 0.7;
     }
     100% {
-        opacity: 0;
+        opacity: 0.4;
     }
 }
 
@@ -300,12 +299,12 @@ audio {
 }
 
 .polygon {
-    animation: 20s cubic-bezier(0.1, 0.11, 0.98, 0.97) 1 polygon;
+    animation: 25s cubic-bezier(0, 1.29, 0.95, 1.41) 1 polygon;
     left: 55%;
     position: absolute;
     top: 60%;
     transform-style: preserve-3d;
-    transform: rotatex( 90deg) rotatey(0) translatey(-240vmin);
+    transform: rotatex( 90deg) rotatey(0) translatey(-200vmin);
 }
 
 @keyframes polygon {
@@ -442,7 +441,7 @@ audio {
     width: 100%;
     height: 100%;
     top: 0;
-    animation: fadeInFormNothing 25s;
+    animation: fadeInFormNothing 30s;
 }
 
 @keyframes shake {
@@ -486,7 +485,7 @@ audio {
     height: 125%;
     margin-top: -10%;
     margin-left: -10%;
-    z-index: 11;
+    z-index: 15;
 }
 
 @font-face {

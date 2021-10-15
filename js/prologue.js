@@ -1,4 +1,4 @@
-speed_up = 100
+speed_up = 1
 
 function loadContent() {
     var beginButton = document.getElementById('begin_button');
@@ -159,13 +159,15 @@ function loadP5() {
     document.getElementById('next_003').remove();
 
     sleep(10000).then(() => {
+        document.getElementById('wormhole').classList = "polygon";
         document.getElementById('cockpit_see_through').style.animation = "shake 1.5s";
         document.getElementById('cockpit_see_through').style.animationIterationCount = "13"
-        document.getElementById('wormhole').classList = "fade-in-image";
     })
 
     sleep(13000).then(() => {
-        document.getElementById('wormhole').classList = "polygon";
+        document.getElementById('cockpit_see_through').style.animation = null;
+        document.getElementById('cockpit_see_through').style.animationIterationCount = null;
+        document.getElementById('cockpit_see_through').style.zIndex = "3000";
     })
 
     sleep(20000).then(() => {
@@ -174,22 +176,20 @@ function loadP5() {
         audio.loop = false;
         audio.load(); //call this to just preload the audio without playing
         audio.play();
-        document.getElementById('cockpit_see_through').style.animation = null;
-        document.getElementById('cockpit_see_through').style.animationIterationCount = null;
+        document.getElementById('deepgate').innerHTML = "";
     }).then(() => {
-        sleep(10000).then(() => {
+        sleep(15000).then(() => {
             document.body.style.backgroundImage = "url('img/m31.jpeg')";
             document.getElementById('deepgate_wormhole_transistion').remove()
-            document.getElementById('deepgate').innerHTML = "";
             document.body.style.backgroundColor = null;
             document.body.style.boxShadow = null;
             document.getElementById('wormhole').remove();
         });
     })
 
-    sleep(33000).then(() => {
+    sleep(38000).then(() => {
         document.getElementById('cockpit_see_through').classList = 'fade-out-image';
-        sleep(3000).then(() => {
+        sleep(4000).then(() => {
             var app_003 = document.getElementById('app_003');
             app_003.innerHTML= "<h1 class='fade-in-image title_font'>Messier 31</h1>"
         })
