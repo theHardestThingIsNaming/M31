@@ -10,7 +10,7 @@ function loadContent() {
 
     var typewriter = new Typewriter(app, {
         loop: false,
-        delay: 30,
+        delay: 3,
         deleteSpeed: 5,
     });
 
@@ -65,7 +65,7 @@ function loadP2() {
 
     var typewriter_002 = new Typewriter(app_002, {
         loop: false,
-        delay: 30,
+        delay: 3,
         deleteSpeed: 5,
     });
 
@@ -103,7 +103,7 @@ function loadP3() {
 
     var typewriter_002 = new Typewriter(app_002, {
         loop: false,
-        delay: 30 / speed_up,
+        delay: 3,
         deleteSpeed: 5,
     });
 
@@ -127,7 +127,7 @@ function loadP4() {
     var app_003 = document.getElementById('app_003');
     var typewriter_003 = new Typewriter(app_003, {
         loop: false,
-        delay: 30 / speed_up,
+        delay: 3,
         deleteSpeed: 5,
     });
 
@@ -196,6 +196,9 @@ function loadP5() {
     }).then(() => {
         sleep(4700).then(() => {
             document.getElementById('cockpit_see_through').remove();
+            sleep(4000).then(() => {
+                window.location.href = '/1.html';
+            });
         })
     })
 }

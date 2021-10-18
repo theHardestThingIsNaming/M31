@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/01/cryostasis.jpeg');
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    color: aliceblue;
+}
+
+.nova {
+    color: rgb(216, 63, 63);
+    font-weight: 900;
+}
+
+.mckay {
+    color: rgb(44, 10, 237);
+    font-weight: 900;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 0.86;
+    height: 90%;
+    width: 95%;
+    padding: 2em;
+}

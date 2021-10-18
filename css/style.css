@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url('img/stars.gif');
+    background-image: url('../img/stars.gif');
     background-size: 100%;
     background-attachment: fixed;
     height: 100%;
@@ -314,7 +314,7 @@ audio {
 }
 
 .side {
-    background-image: url('img/prologue/blue.jpeg');
+    background-image: url('../img/prologue/blue.jpeg');
     background-size: 159.12989vmin 25%;
     filter: hue-rotate(-10deg);
     height: 100vmin;
