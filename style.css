@@ -314,7 +314,7 @@ audio {
 }
 
 .side {
-    background-image: url('img/chapter_one/blue.jpeg');
+    background-image: url('img/prologue/blue.jpeg');
     background-size: 159.12989vmin 25%;
     filter: hue-rotate(-10deg);
     height: 100vmin;
