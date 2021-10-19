@@ -490,7 +490,7 @@ audio {
 
 @font-face {
     font-family: FlareRegular;
-    src: url(./font/Flare-Regular.ttf);
+    src: url(../font/Flare-Regular.ttf);
 }
 
 .title_font {

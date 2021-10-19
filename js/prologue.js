@@ -83,13 +83,9 @@ function loadP2() {
 
 function loadP21() {
     document.getElementById('continue_button_002').remove();
-    document.getElementById('spaceship').classList = 'fade-out-image';
-    sleep(2500).then(() => {
-        document.getElementById('localgroup').classList = 'fade-in-image';
-    })
-    sleep(4500).then(() => {
-        document.getElementById('spaceship').style.display = 'none';
-    })
+    document.getElementById('spaceship').style.animation = null;
+    document.getElementById('spaceship').style.display = 'none';
+    document.getElementById('localgroup').classList = 'fade-in-image';
     sleep(30000).then(() => {
         document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';
     });
@@ -196,7 +192,7 @@ function loadP5() {
     }).then(() => {
         sleep(4700).then(() => {
             document.getElementById('cockpit_see_through').remove();
-            sleep(4000).then(() => {
+            sleep(7000).then(() => {
                 window.location.href = '/1.html';
             });
         })
