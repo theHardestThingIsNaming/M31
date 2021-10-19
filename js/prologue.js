@@ -1,5 +1,3 @@
-speed_up = 1
-
 function loadContent() {
     var beginButton = document.getElementById('begin_button');
     beginButton.style.display = 'none';
@@ -49,7 +47,7 @@ function loadContent() {
         .typeString('<br\><br\><i>Chancellor:</i> "With its dying light, NC-167 will ignite the DeepGate"')
         .start();
 
-    sleep(40000 / speed_up).then(() => {
+    sleep(40000).then(() => {
         document.getElementById('next').innerHTML = '<button type="button" class="button button_next" id="continue_button" onclick="loadP2()">Continue</button>';
     });
 }
@@ -75,10 +73,10 @@ function loadP2() {
         .pauseFor(500)
         .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. Mining crews will being to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
         .pauseFor(500)
-        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassible distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million years away."`)
+        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassible distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million lightyears away."`)
         .start();
 
-    sleep(50000 / speed_up).then(() => {
+    sleep(35000).then(() => {
         document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP21()">Continue</button>';
     });
 }
@@ -87,10 +85,12 @@ function loadP21() {
     document.getElementById('continue_button_002').remove();
     document.getElementById('spaceship').classList = 'fade-out-image';
     sleep(2500).then(() => {
-        document.getElementById('spaceship').style.display = 'none';
         document.getElementById('localgroup').classList = 'fade-in-image';
     })
-    sleep(30000 / speed_up).then(() => {
+    sleep(4500).then(() => {
+        document.getElementById('spaceship').style.display = 'none';
+    })
+    sleep(30000).then(() => {
         document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP3()">Continue</button>';
     });
 
