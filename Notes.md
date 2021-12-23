@@ -8,7 +8,7 @@
 
 - Prof Hynes: Physics section Leader,
 
-- Tactical: Lance Iris
+- Admiral Vincent Strugon: Tactical
 
 
 ## Section Leaders
@@ -37,10 +37,10 @@
 
     - Nova ends up in M31
     - 12 Leaders are faced with a hard situation of how to continue
-        -> Janeway decides to keep the majority of the crew in status until they reach a planet
+        -> McKay decides to keep the majority of the crew in status until they reach a planet
         -> This takes about 6 months to get to a promising cluster of planets 
         -> Meanwhile the ousted military leaders aren't happy, with the lack of vision
-        -> One or a few of them stage a cue 
+        -> One or a few of them stage a Coup d'état
         -> A new unwelcomed leader is placed at the head
     - bumpy but successful seeds are planted 
         -> A colony is established and faces hard times, classes emerge 
@@ -49,7 +49,7 @@
         -> The New Union double downs on the remaining lower class, while seeds of new edge clusters spring up in remote parts of the local system
     - Cultures split into ways of living which were previously blocked 
     - These cultures have tension , war, trade, history
-    - 
+
 
 #### What the fuck to do now
 
