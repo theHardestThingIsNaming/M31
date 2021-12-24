@@ -34,9 +34,14 @@ body {
 .content {
     position: absolute;
     background-color: black;
-    opacity: 0.86;
+    opacity: 0.1;
     min-height: 100%;
     width: 100%;
+}
+
+.content.darker {
+    opacity: 0.86;
+    transition: all 3s;
 }
 
 #typewriter_tag {
