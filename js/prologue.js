@@ -27,7 +27,7 @@ function loadContent() {
         .deleteChars(11)
         .typeString('<strong>leap</strong> into the great unknown.. ')
         .pauseFor(1000)
-        .typeString('Witness the sacrifice of NC-167, as the Solar Spike beings its terrible work."')
+        .typeString('Witness the sacrifice of NC-167, as the Solar Spike begins its terrible work."')
         .pauseFor(1000)
         .callFunction(() => {
             document.getElementById('chancellor').classList = "hidden"
@@ -38,7 +38,7 @@ function loadContent() {
             document.getElementById('supernova').classList = "hidden"
             document.getElementById('supernova-blast').classList = 'fade-in-image';
         })
-        .typeString('<br\><br\><i>Chancellor:</i> "Worry not, for within the fires of destruction, we forge a way for our beloved Union to reach beyond. To grasp at new stars and worlds once denied to us by the 2.5 millions lightyears of cold dead space...."')
+        .typeString('<br\><br\><i>Chancellor:</i> "Worry not, for within the fires of destruction, we forge a way for our beloved Union to reach beyond. To grasp at new stars and worlds once denied to us, by the 2.5 millions lightyears of cold dead space...."')
         .callFunction(() => {
             document.getElementById('supernova-blast').classList = 'hidden';
             document.getElementById('chancellor').classList = "fade-in-image"
@@ -71,7 +71,7 @@ function loadP2() {
         .pauseFor(5000)
         .typeString(`<i>Chancellor:</i>  "The Unions flagship 'Nova prospectus' will be manned by over 100,000 Union souls. Filled with the brightest minds that the Union has produced. The crew aboard 'Nova prospectus' will mainly comprise of specialists from the fields of Science, Military, Mining as well as the required supporting staff."`)
         .pauseFor(500)
-        .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. Mining crews will being to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
+        .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. Mining crews will begin to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
         .pauseFor(500)
         .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassible distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million lightyears away."`)
         .pauseFor(1000)

@@ -35,13 +35,16 @@ function chapter_1_page_1() {
       `<br\><br\><i class="mckay">McKay:</i> "Unexpected parameters?" `
     )
     .pasteString(
-      `<br\><br\><i class="nova">Nova:</i> "When syncing the ships time against the view of the MilkyWay, it appears that the present time is -1.11 galactic years." `
+      `<br\><br\><i class="nova">Nova:</i> "When syncing the ships time against the view of the MilkyWay, it appears that the present time is -1.11 galactic years from our expected arrival date." `
     )
     .pasteString(
       `<br\><br\>Commander McKay was still adjusting to the after effects of the reanimation procedure. Her head was pounding, stomach uneasy and her breathing was laboured. McKay leaned over the side of the pod and proceeded to throw up thoroughly.`
     )
     .pasteString(
-      `<br\><br\><i class="mckay">McKay:</i> "Thats better... minus 1.11 galactic years in the past. Putting us over 250 million years before the Unions founding". McKay took a moment to settled herself. This was not one of the possibilities she had expected going into this mission. Death, a damaged Nova, mutiny. She had accepted all these scenarios, but this was definitely something new. The Chancellor is going to shit his pants if he ever finds out. She and her crew were alive, the Nova is intact, albeit in the past. But we're alive. `
+      `<br\><br\><i class="mckay">McKay:</i> "Thats better... Nova, whats your degree of certainty that we're minus 1.11 galactic years in the past? That would place us over 250 million years before the Unions founding". McKay took a moment to settled herself. This was not one of the possibilities she had expected going into this mission. Death, a damaged Nova, mutiny. She had accepted all these scenarios, but this was definitely something new. The Chancellor will lose his damn mind if he ever finds out. Never mind that now, first things first ...She and her crew were alive, the Nova is intact, albeit in the past. We're alive and in a new galaxy.`
+    )
+    .pasteString(
+      `<br\><br\><i class="nova">Nova:</i> "Based of the star charts there is no doubt to our current time and location." `
     )
     .pasteString(
       `<br\><br\><i class="mckay">McKay:</i> "Nova wake up all section leaders, give them some time to compose themselves and have them meet on the ships helm. I'll inform them of the situation."`
@@ -150,7 +153,7 @@ function chapter_1_page_3() {
 
   typewriter
     .pasteString(
-      `<i class="nova">Nova: </i> "Given the current stock of reserves, there are three solar systems within range which contain one or more habitable planets. The closest of which is 6 months travel. System 'A' contains an ice covered mid sized planet. The planet is stuck in an ever worsening ice age, as it drifts further from its sun. The planet on its current course will remain habitable for roughly another 167 standard years."`
+      `<i class="nova">Nova: </i> "Given the current stock of reserves, there are three solar systems within range which contain one or more habitable planets. The closest of which is 6 months travel. System 'A' contains an ice covered mid sized planet. This planet has a degrading orbit and is stuck in an ever worsening ice age, as it drifts further from its sun. The planet on its current course will remain habitable for roughly another 167 standard years."`
     )
     // TODO Display a graphic of System A
     .pasteString(
