@@ -44,6 +44,20 @@ body {
     transition: all 3s;
 }
 
+.content.block {
+    opacity: 1;
+    transition: all 3s;
+}
+
 #typewriter_tag {
     padding: 2em;
+}
+
+.padded {
+    padding: 2em;
+    padding-bottom: 0%;
+}
+
+.fixed_height {
+    height: 26em;
 }
