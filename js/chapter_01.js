@@ -1,7 +1,7 @@
 function startContent() {
-    // chapter_1_page_1();
-    //chapter_1_page_2();
-    chapter_1_page_3();
+    chapter_1_page_1();
+    // chapter_1_page_2();
+    // chapter_1_page_3();
 }
 
 function chapter_1_page_1() {
@@ -165,30 +165,34 @@ function chapter_1_page_3() {
         .pasteString(
             `<i class="nova">Nova: </i> "Given the current stock of reserves, there are three solar systems within range which contain one or more habitable planets. The closest of which is 6 months travel. System 'A' contains an ice covered mid sized planet. This planet has a degrading orbit and is stuck in an ever worsening ice age, as it slowly drifts further from its sun. As it stands the planet on its current course will remain habitable for roughly another 167 standard years."`
         )
-        .pauseFor(1000)
-        .pasteString(`<div id="system_a" class="fade-in-image padded"><img src="img/01/systemA.gif" class="ex_large_img"></div>`)
-        .pauseFor(3000)
+        .pasteString(`
+            <div id="system_a">
+                <button type="button" class="button button_next" onclick="releave_gif('system_a', 'img/01/systemA.gif')">System A</button>
+            </div>`)
         .pasteString(
             `<br\><br\><i class="nova">Nova: </i> "System B, would take 19 months of travel, and contains a trio of potential planets. Two Class K and one M planet. Due to the distances involved certainty on the planets classification can not be guaranteed, and sits at 78% probability"`
         )
-        .pauseFor(1000)
-        .pasteString(`<div id="system_b" class="fade-in-image padded"><img src="img/01/systemB.gif" class="ex_large_img"></div>`)
-        .pauseFor(3000)
+        .pasteString(`
+            <div id="system_b">
+                <button type="button" class="button button_next" onclick="releave_gif('system_b', 'img/01/systemB.gif')">System B</button>
+            </div>`)
         .pasteString(
             `<br\><br\><i class="nova">Nova: </i> "System C is 6 standard years travel and would nearly exhaust the ships reserves. System C contains one M class planet and looks to have a large mineral content, as well as a breathable atmosphere"`
         )
-        .pauseFor(1000)
-        .pasteString(`<div id="system_c" class="fade-in-image padded"><img src="img/01/systemC.gif" class="ex_large_img"></div>`)
-        .pauseFor(3000)
+        .pasteString(`
+        <div id="system_c">
+            <button type="button" class="button button_next" onclick="releave_gif('system_c', 'img/01/systemC.gif')">System C</button>
+        </div>`)
         .pasteString(
             `<br\><br\><i class="mckay">McKay: </i> "Thank you Nova." Commander McKay shifted her focus to Samantha. 'That woman is unflappable.. she is taking this situation as if was the same as hearing the morning weather report.' Samantha thought to herself.  "Doctor Ki, you designed the suspended animation pods. How long can they keep going for if we needed to keep most of the crew in status during the trip?"`
         )
         .pasteString(
             `<br\><br\><i class="sam">Samantha: </i> When speaking on any area in her range of expertise , Samantha always felt assured that she had  with a smooth confidence  "The Pods were designed to with stand the effects of DeepGate travel.. long term containment was not a consideration, nor was it tested for. The pods are filled with a thermal gel, keeping the users bio material on the brink of absolute motionlessness. The gel however, has a limited shelf life, and will lose its effectiveness with each passing week." Samantha was feeling the pressure of the room upon her. Anticipating the next questions she asked; "Nova, can you bring up a chart of the shelve life of the thermal gel, and overlay that with the expected loss in bodily function in terms of brain, organ and muscular damage. Now highlight the cross section using a weighted average of the expected disability incurred over time. Great, now add the times to reach each of the systems"`
         )
-        .pauseFor(1000)
-        .pasteString(`<div id="brainDamage" class="fade-in-image padded"><img src="img/01/brainDamage.gif" class="ex_large_img fixed_height"></div>`)
-        .pauseFor(3000)
+        .pasteString(`
+        <div id="brainDamage">
+            <button type="button" class="button button_next" onclick="releave_gif('brainDamage', 'img/01/brainDamage.gif')">Status Damage</button>
+        </div>`)
         .pasteString(
             `<br\><br\> The chart displayed removed System C as an option. Just under 10% of the ships crew would be able to survive the reanimation process. System B's 19 months of status would result in mild brain damage to over 30% of the crew. With the crews population mostly being high functioning individuals, this would be a tremendous blow to the crew themselves and to Novas chances of setting up a colony here in M31`
         )
