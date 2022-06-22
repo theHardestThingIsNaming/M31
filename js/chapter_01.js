@@ -29,7 +29,7 @@ function chapter_1_page_1() {
             `<br\><br\><i class="mckay">McKay:</i> "Nova.." McKay barked horsily, "..provide situation report." `
         )
         .pasteString(
-            `<br\><br\><i class="nova">Nova:</i> "Commander we have successfully arrived to the target location. The crew and the ship remain fully intact. Primary mission has been derailed due to unexpected parameters" `
+            `<br\><br\><i class="nova">Nova:</i> "Commander we have successfully arrived at the target location. The crew and the ship remain fully intact. Primary mission has been derailed due to unexpected parameters" `
         )
         .pasteString(
             `<br\><br\><i class="mckay">McKay:</i> "Unexpected parameters?" `
@@ -187,7 +187,7 @@ function chapter_1_page_3() {
             `<br\><br\><i class="mckay">McKay: </i> "Thank you Nova." Commander McKay shifted her focus to Samantha. 'That woman is unflappable.. she is taking this situation as if was the same as hearing the morning weather report.' Samantha thought to herself.  "Doctor Ki, you designed the suspended animation pods. How long can they keep going for if we needed to keep most of the crew in status during the trip?"`
         )
         .pasteString(
-            `<br\><br\><i class="sam">Samantha: </i> When speaking on any area in her range of expertise , Samantha always felt assured that she had  with a smooth confidence  "The Pods were designed to with stand the effects of DeepGate travel.. long term containment was not a consideration, nor was it tested for. The pods are filled with a thermal gel, keeping the users bio material on the brink of absolute motionlessness. The gel however, has a limited shelf life, and will lose its effectiveness with each passing week." Samantha was feeling the pressure of the room upon her. Anticipating the next questions she asked; "Nova, can you bring up a chart of the shelve life of the thermal gel, and overlay that with the expected loss in bodily function in terms of brain, organ and muscular damage. Now highlight the cross section using a weighted average of the expected disability incurred over time. Great, now add the times to reach each of the systems"`
+            `<br\><br\><i class="sam">Samantha: </i> When speaking within an area of her expertise, Samantha's confidence in herself was solid as rock. Standing tall and formal, she addressed the room. "The Pods were designed to with stand the effects of DeepGate travel.. long term containment was not a consideration, nor was it tested for. The pods are filled with a thermal gel, keeping the users bio material on the brink of absolute motionlessness. The gel however, has a limited shelf life, and will lose its effectiveness with each passing week." Samantha had the rooms undevided attension. Reading their expressions she knew now was a good time to regain some of the momentum. "Nova, bring up a chart of the shelve life of the thermal gel, and overlay that with the expected loss in bodily function in terms of brain, organ and muscular damage. Now highlight the cross section using a weighted average of the expected disability incurred over time. Great, now add the times to reach each of the systems"`
         )
         .pasteString(`
         <div id="brainDamage">
