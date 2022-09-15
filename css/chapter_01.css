@@ -40,8 +40,8 @@ body {
 }
 
 .content.darker {
-    opacity: 0.86;
-    transition: all 3s;
+    opacity: 0.94;
+    transition: all 5s;
 }
 
 .content.block {
@@ -51,6 +51,8 @@ body {
 
 #typewriter_tag {
     padding: 2em;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .padded {

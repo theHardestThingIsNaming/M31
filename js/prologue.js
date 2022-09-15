@@ -38,7 +38,7 @@ function loadContent() {
             document.getElementById('supernova').classList = "hidden"
             document.getElementById('supernova-blast').classList = 'fade-in-image';
         })
-        .typeString('<br\><br\><i>Chancellor:</i> "Worry not, for within the fires of destruction, we forge a way for our beloved Union to reach beyond. To grasp at new stars and worlds once denied to us, by the 2.5 millions lightyears of cold dead space...."')
+        .typeString('<br\><br\><i>Chancellor:</i> "Worry not, for within the fires of destruction, we forge a way for our beloved Union to reach beyond. To grasp at new stars and worlds once denied to us, by the 2.5 million lightyears of cold dead space...."')
         .callFunction(() => {
             document.getElementById('supernova-blast').classList = 'hidden';
             document.getElementById('chancellor').classList = "fade-in-image"
@@ -73,7 +73,7 @@ function loadP2() {
         .pauseFor(500)
         .typeString('<br\><br\><i>Chancellor:</i> "Once arrived, the crew of Nova prospectus will establish a base of operations. Mining crews will begin to extract the necessary material to construct a worm-whole relay node. Allowing sustainable access back and forth to the M31 galaxy."')
         .pauseFor(500)
-        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassible distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million lightyears away."`)
+        .typeString(`<br\><br\><i>Chancellor:</i> "For one to truly grasp the magnitude of this endeavour, it is important to have a fundamental concept of scale... at the galactic level. The size of our home galaxy is a mere 52 thousand light-years across. Yet it has been our cradle and prison for all of recorded time. Now that the Union has reached the Milky Way's edge, we find ourselves looking at once thought to be impassable distances. Counted in the millions, our nearest neighbor lies a staggering 2.5 million lightyears away."`)
         .pauseFor(1000)
         .callFunction(() => {
             document.getElementById('next_002').innerHTML = '<button type="button" class="button button_next" id="continue_button_002" onclick="loadP21()">Continue</button>';
@@ -139,7 +139,7 @@ function loadP4() {
         .pauseFor(300)
         .typeString(`<br\><br\><i class="nova">Nova:</i>  "The crew remained sedated in their status tanks. The voyage to M31 will be piloted by the ships AI systems."`)
         .pauseFor(300)
-        .typeString(`<br\><br\><i class="nova">Nova:</i>  "The DeepGate will appear in the view port shortly"`)
+        .typeString(`<br\><br\><i class="nova">Nova:</i>  "The DeepGate will appear in the viewport shortly"`)
         .pauseFor(3000)
         .callFunction(() => {
             loadP5();

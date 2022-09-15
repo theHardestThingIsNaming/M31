@@ -1,0 +1,13 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "javascript",
+            "scheme": "file",
+            "pattern": "js/chapter_01.js"
+        },
+        {
+            "language": "javascript",
+            "scheme": "file"
+        }
+    ]
+}
